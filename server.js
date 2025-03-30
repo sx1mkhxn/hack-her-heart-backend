@@ -5,7 +5,9 @@ const nodemailer = require('nodemailer');
 const cors = require('cors');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: 'https://hack-her-heart-backend.vercel.app/' // Your exact Vercel URL
+  }));
 app.use(express.json());
 
 // Twilio SMS Setup (if using SMS)
